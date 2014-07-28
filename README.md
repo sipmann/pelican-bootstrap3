@@ -235,9 +235,7 @@ The footer will display a copyright message using the AUTHOR variable and the ye
 
 ## Live example
 
-[This is my website](http://dandydev.net)
-
-If you want more examples of what you could do with this theme, have a [look here](EXAMPLES.md).
+[Site](http://www.sipmann.com)
 
 ## Screenshot
 
