@@ -12,7 +12,7 @@ body {
 }
 
 /* for list-group-items nested within a list-group-item, reset the bottom
-   padding of the last item, b/c the containing item has paddimg already 
+   padding of the last item, b/c the containing item has paddimg already
  */
 .list-group-item .list-group-item:last-child {
     padding-bottom: 0px;
@@ -89,6 +89,11 @@ a, a:hover {
 .entry-content figcaption, .caption {
     font-size: small;
     margin-bottom: 2px;
+}
+
+.entry-content p {
+    text-align: justify;
+    text-indent: 15px;
 }
 
 .floatright, .align-right {
