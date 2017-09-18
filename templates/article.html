@@ -44,5 +44,22 @@
             {% include 'includes/comments.html' %}
         </article>
     </section>
-
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://google.com/article"
+        },
+        "headline": "{{ article.title }}",
+        "image": [],
+        "datePublished": "{{ article.date }}",
+        "dateModified": "{{ article.date }}",
+        "author": {
+            "@type": "Person",
+            "name": "{{ article.author.name }}"
+        }
+    }
+    </script>
 {% endblock %}
