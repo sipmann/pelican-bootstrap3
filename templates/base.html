@@ -185,7 +185,7 @@
     {% if SOCIAL %}
     , "sameAs": [
         {% for name, link in SOCIAL %}
-            "{{ link }}",
+            "{{ link }}"{{ "," if not loop.last }}
         {% endfor %}
     ]
     {% endif %}
