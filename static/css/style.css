@@ -94,6 +94,7 @@ a, a:hover {
 .entry-content p {
     text-align: justify;
     text-indent: 15px;
+	margin: 20px 0;
 }
 
 .floatright, .align-right {
