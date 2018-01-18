@@ -163,3 +163,10 @@ figure.floatcenter, .align-center {
 .tagcloud li {
     padding: 0px;
 }
+
+.livros {
+	border-radius: 5px;
+	border:1px solid gray;
+	margin: 20px 0;
+	padding: 5px;
+}
