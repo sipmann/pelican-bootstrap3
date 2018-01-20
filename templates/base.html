@@ -58,15 +58,6 @@
     {# Twitter Cards tags #}
     {% include 'includes/twitter_cards.html' %}
 
-
-    {% if SENNA is not defined %}
-        {% set SENNA = False %}
-    {% endif %}
-    {% if SENNA %}
-        <script src="{{ SITEURL }}/theme/js/senna-min.js"></script>
-        <script src="{{ SITEURL }}/theme/js/sennaapp.js"></script>
-    {% endif %}
-
     <!-- Bootstrap -->
     {% if BOOTSTRAP_THEME %}
         <link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.{{ BOOTSTRAP_THEME }}.min.css" type="text/css"/>
