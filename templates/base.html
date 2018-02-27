@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:og="http://ogp.me/ns#"
-      xmlns:fb="https://www.facebook.com/2008/fbml">
+      xmlns:fb="https://www.facebook.com/2008/fbml" lang="{{ DEFAULT_LANG }}">
 <head>
     <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
     <!-- Using the latest rendering mode for IE -->
@@ -88,6 +88,10 @@
     {% if FEED_ALL_RSS %}
         <link href="{{ SITEURL }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate"
               title="{{ SITENAME }} RSS Feed"/>
+    {% endif %}
+
+    {% if MANIFEST %}
+    <link rel="manifest" href="/manifest.json">
     {% endif %}
 
 </head>
