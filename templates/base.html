@@ -43,6 +43,9 @@
             {% if article.author %}
                 <meta property="article:author" content="{{ article.author }}" />
             {% endif %}
+            {% if article.image %}
+                <meta property="og:image" content="{{ article.image }}"/>
+            {% endif %}
         {% elif page %}
             <meta property="og:type" content="article"/>
             <meta property="og:title" content="{{ page.title }}"/>
