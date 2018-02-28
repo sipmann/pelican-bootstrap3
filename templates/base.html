@@ -44,7 +44,11 @@
                 <meta property="article:author" content="{{ article.author }}" />
             {% endif %}
             {% if article.image %}
-                <meta property="og:image" content="{{ article.image }}"/>
+                <meta property="og:image" content="{{ SITEURL }}/{{ article.image }}"/>
+			{% else %}
+				{% if DEFAULT_IMAGE %}
+				<meta property="og:image" content="{{ SITEURL }}/{{ DEFAULT_IMAGE }}"/>
+				{% endif %}
             {% endif %}
         {% elif page %}
             <meta property="og:type" content="article"/>
