@@ -45,10 +45,8 @@
             {% endif %}
             {% if article.image %}
                 <meta property="og:image" content="{{ SITEURL }}/{{ article.image }}"/>
-			{% else %}
-				{% if DEFAULT_IMAGE %}
+			{% elif DEFAULT_IMAGE %}
 				<meta property="og:image" content="{{ SITEURL }}/{{ DEFAULT_IMAGE }}"/>
-				{% endif %}
             {% endif %}
         {% elif page %}
             <meta property="og:type" content="article"/>
