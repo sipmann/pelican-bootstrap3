@@ -37,17 +37,19 @@
                     </div>
                 </div>
                 {{ article.content }}
-
+                
+                {% if GOOGLE_ADS_CLIENT %}
                 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                 <ins class="adsbygoogle"
                      style="display:block; text-align:center;"
                      data-ad-layout="in-article"
                      data-ad-format="fluid"
-                     data-ad-client="ca-pub-3097623931513783"
+                     data-ad-client="{{ GOOGLE_ADS_CLIENT }}"
                      data-ad-slot="8699702701"></ins>
                 <script>
                      (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
+                {% endif %}
 
             </div>
             <!-- /.entry-content -->
@@ -65,7 +67,13 @@
             "@id": "https://google.com/article"
         },
         "headline": "{{ article.title }}",
+        {% if article.image %}
+            "image": ["{{ SITEURL }}/{{ article.image }}"],
+        {% elif DEFAULT_IMAGE %}
+        "image": ["{{ SITEURL }}/{{ DEFAULT_IMAGE }}"],
+        {% else %}
         "image": [],
+        {% endif %}
         "datePublished": "{{ article.date }}",
         "dateModified": "{{ article.date }}",
         "author": {
