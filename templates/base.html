@@ -56,7 +56,14 @@
             <meta property="og:type" content="website"/>
             <meta property="og:title" content="{{ SITENAME }}"/>
             <meta property="og:url" content="{{ SITEURL }}"/>
-            <meta property="og:description" content="{{ SITENAME }}"/>
+			{% if SITEDESCRIPTION %}
+            <meta property="og:description" content="{{ SITEDESCRIPTION }}"/>
+			{% else %}
+			<meta property="og:description" content="{{ SITENAME }}"/>
+			{% endif %}
+			{% if DEFAULT_IMAGE %}
+			<meta property="og:image" content="{{ SITEURL }}/{{ DEFAULT_IMAGE }}"/>
+            {% endif %}
         {% endif %}
     {% endif %}
 
