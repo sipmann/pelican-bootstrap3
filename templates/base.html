@@ -29,6 +29,9 @@
                   content="{{ SITEURL }}/{{ OPEN_GRAPH_IMAGE }}"/>
         {% endif %}
         {% if article %}
+            {% if article.description %}
+            <meta name="description" content="{{ article.description }}" />
+            {% endif %}
             <meta property="og:type" content="article"/>
             <meta property="og:title" content="{{ article.title|striptags }}"/>
             <meta property="og:url" content="{{ SITEURL }}/{{ article.url }}"/>
