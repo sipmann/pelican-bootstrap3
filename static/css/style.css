@@ -179,3 +179,7 @@ figure.floatcenter, .align-center {
 	margin: -4px;
 	border-bottom: 1px solid;
 }
+
+.container {
+    font-size: 16px;
+}
