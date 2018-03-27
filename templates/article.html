@@ -90,13 +90,14 @@
     {
         "@context": "http://schema.org",
         "@type": "NewsArticle",
+        "@id" : "{{ SITEURL }}/{{ article.url }}",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://google.com/article"
         },
         "headline": "{{ article.title }}",
         {% if article.image %}
-            "image": ["{{ SITEURL }}/{{ article.image }}"],
+        "image": ["{{ SITEURL }}/{{ article.image }}"],
         {% elif DEFAULT_IMAGE %}
         "image": ["{{ SITEURL }}/{{ DEFAULT_IMAGE }}"],
         {% else %}
@@ -106,6 +107,10 @@
         "dateModified": "{{ article.date }}",
         "author": {
             "@type": "Person",
+            "name": "{{ article.author.name }}"
+        },
+        "publisher": {
+            "@type": "Organization",
             "name": "{{ article.author.name }}"
         }
     }
