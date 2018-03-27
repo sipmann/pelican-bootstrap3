@@ -112,6 +112,10 @@
         "publisher": {
             "@type": "Organization",
             "name": "{{ article.author.name }}"
+            {% if AUTHOR_IMAGE %}
+            ,
+            "logo": "{{ AUTHOR_IMAGE }}"
+            {% endif %}
         }
     }
     </script>
